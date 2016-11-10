@@ -11,13 +11,16 @@ package core.Hilos;
  ****************************/
 
 public class ThreadExtend extends Threads {
-    
+    /**
+     * [Construct]
+     * @param name set name of this intance 
+     */
     public ThreadExtend(String name) {
         super(name, TypeThread.Types.TYPE1);
     }
     
     @Override
     public void run(){
-         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         //TODO: Write you code here
     }
 }
