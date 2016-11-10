@@ -1,5 +1,4 @@
 // Written by F.Q Member from HomieStart group http://creativecommons.org/publicdomain/zero/1.0/
-
 package core.File;
 
 import java.io.FileInputStream;
@@ -16,11 +15,18 @@ import java.io.OutputStream;
  ****************************/
 
 public final class FileIO extends Files implements IntFiles {
-
+    /**
+     * [Construct]
+     * @param KiloBytes Define size of the buffer 
+     */
     public FileIO(int KiloBytes) {
         super(KiloBytes);
     }
     
+    /**
+     * [Use for Read a File]
+     * @param path Define the path of you File
+     */
     @Override
     public void FileReadStream(String path){
         long inTimer;
@@ -39,7 +45,11 @@ public final class FileIO extends Files implements IntFiles {
         //System.out.println("Time:" + (inTimer - System.currentTimeMillis()));
     }
     
-    
+    /**
+     * [Use for write a Fily]
+     * @param path Define the path of you File
+     * @param context The context for write in you file
+     */
     @Override
     public void FileWriteStream(String path, String context){
         long inTimer;
@@ -54,6 +64,11 @@ public final class FileIO extends Files implements IntFiles {
         //System.out.println("Time:" + (inTimer - System.currentTimeMillis()));
     }
     
+    /**
+     * [Use for create a copy of you file]
+     * @param path Path of the Orginal file
+     * @param path2 path of the Copy <p>Set Location<p>
+     */
     @Override
     public void FileCopyStream(String path, String path2){
         long inTimer;
