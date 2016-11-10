@@ -18,6 +18,12 @@ public class ThreadAnon{
     private String Method;
     private Object[] args;
     
+    /**
+     * [Anonymous Thread]
+     * @param o any object Class
+     * @param MethodName a method of the object class
+     * @param Paramsargs params of the method <p>OR NULL<p> 
+     */
     public ThreadAnon(Object o, String MethodName, Object... Paramsargs) {
         this.O = o;
         this.Method = MethodName;
@@ -30,18 +36,23 @@ public class ThreadAnon{
         };
     }
     
+    /**
+     * [Return the thread]
+     * @return this intance of thread
+     */
     public final Runnable getThread(){
         return this.thread;
     }
     
+    /**
+     * [Chage method used by the Thread]
+     * @param o any object Class
+     * @param MethodName a method of the object class
+     * @param Paramsargs params of the method <p>OR NULL<p> 
+     */
     public final void changeMehtod(Object o, String MethodName, Object... Paramsargs) {
         this.O = o;
         this.Method = MethodName;
         this.args = Paramsargs;
-    }
-    
-    public final Runnable GetThread(){
-        return this.thread;
-    }
-    
+    }    
 }
