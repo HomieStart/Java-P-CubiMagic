@@ -11,11 +11,18 @@ package core.Hilos;
  ****************************/
 
 public class ThreadCallable extends Callables {
-    
+    /**
+     * [Construct]
+     * @param name set name of this intance 
+     */
     public ThreadCallable(String name) {
         super(name);
     }
     
+    /**
+     * [Run thread]
+     * @return a value when finally the loops 
+     */
     @Override
     public String call(){
         try{
@@ -24,6 +31,6 @@ public class ThreadCallable extends Callables {
         }catch(Exception e){
             System.out.println(e);
         }
-        return "Finish " + this.name;
+        return null;
     }
 }
