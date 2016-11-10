@@ -15,12 +15,18 @@ import java.util.concurrent.Callable;
 * <This class Callable, return any value defined by Dev>
 */
 public class Callables implements Callable<String> {
-
     protected String name;
+    /**
+     * [Construct]
+     * @param name Name of this thread object 
+     */
     public Callables(String name){
         this.name = name;
     }
-
+    /**
+     * [Run Action of this thread]
+     * @return value when finalize all loops.
+     */
     @Override
     public String call() {
         try{
