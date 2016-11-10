@@ -11,14 +11,17 @@ package core.Hilos;
 
 public class ThreadRunnable implements Runnable{
     private final String name;
-    
+     /**
+     * [Construct]
+     * @param name set name of this intance 
+     */
     public ThreadRunnable(String name){
         this.name = name;
     }
     
     @Override
     public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //TODO: Write you code here
     }
     
 }
