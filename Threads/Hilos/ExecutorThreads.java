@@ -17,13 +17,15 @@ import java.util.logging.Logger;
  ****************************/
 
 public final class ExecutorThreads {
-    
-    private ExecutorThreads(){
-        
-    }
-    
+    /**
+     * DO NOT USE, NOT FINISH
+     * [Execute a service with Callers threads]
+     * @param c Callable thread
+     * @param ThreadsPools threads pools sub process <p> define One <p>
+     * @param CompletionService 
+     */
     public final static void ExecutorService(Callables c, int ThreadsPools, boolean CompletionService){
-        ExecutorService exec = Executors.newFixedThreadPool(ThreadsPools);
+        ExecutorService exec = Executors.newFixedThreadPool(ThreadsPools); //a idea how much threads executed
         Future<?> task;
         if(CompletionService){
             //ExecutorCompletionService<?>
@@ -44,6 +46,13 @@ public final class ExecutorThreads {
         ShowTaskFinish(task);
     }
     
+     /**
+     * DO NOT USE, NOT FINISH
+     * [Execute a service with Callers threads]
+     * @param c Runnable thread
+     * @param ThreadsPools threads pools sub process <p> define One <p>
+     * @param CompletionService 
+     */
     public final static void ExecutorService(Runnable c, int ThreadsPools, boolean CompletionService){
         ExecutorService exec = Executors.newFixedThreadPool(ThreadsPools);
         Future<?> task;
@@ -66,7 +75,10 @@ public final class ExecutorThreads {
         ShowTaskFinish(task);
     }
     
-    
+    /**
+     * Show the final value for Callables threads
+     * @param task a future task for interact
+     */
     private static void ShowTaskFinish(Future<?> task){
         try {
             System.out.println(task.get());
@@ -74,4 +86,9 @@ public final class ExecutorThreads {
             Logger.getLogger(ExecutorThreads.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    private ExecutorThreads(){
+        //not supported
+    }
+    
 }
