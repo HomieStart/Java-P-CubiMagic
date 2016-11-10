@@ -2,4 +2,4 @@
 Java Util Repositories HomieStart Library
 
 #FILE-IO
-Package containa a File Script for Read, Write and Copy any Files in Java
+Package contain a code for Read, Write and Copy any files in Java
