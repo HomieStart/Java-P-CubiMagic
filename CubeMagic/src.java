@@ -75,6 +75,7 @@ public final class CubeMagic {
      * @param args 
      */
     public static void main(String[] args) {
+        // <INGRESO DE DIMENSION POR CONSOLA>
         int r = 0;
         boolean e = false;
         System.out.println("Cubo Magico de Dimensiones Impar");
@@ -98,6 +99,8 @@ public final class CubeMagic {
                     r = 0;
                 }
         }
+        // </INGRESO DE DIMENSION POR CONSOLA>
+        
         CubeMagic c = new CubeMagic(r);
         System.out.println(c.toString());
     }
